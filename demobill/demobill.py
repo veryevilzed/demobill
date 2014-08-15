@@ -42,8 +42,8 @@ def do_billing(j):
     return { "status": "OK", "balance": user.balance }
 
 
-@app.post('/go')
-def go():
+@app.post('/do')
+def do():
     response.content_type = 'application/json; charset=utf-8'
     j = json.loads(request.body.read())
     return json.dumps(do_billing(j))
