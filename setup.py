@@ -9,12 +9,12 @@ from distutils.core import setup
 
 install_requires = [
         'bottle',
-        'bottle-sqlite',
-        'gunicorn'
+        'gunicorn',
+        'peewee'
     ]
 
 setup(name='demobill',
-      version='1.0',
+      version='1.01',
       description='Demonstration Billing Server',
       author='Dmitry Vysochin',
       author_email='dmitry.vysochin@gmail.com',
