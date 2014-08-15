@@ -83,12 +83,13 @@ def root():
     return res
 
 def usage():
-    """ Demonstration Billing server v1.0
+    res = """ Demonstration Billing server v1.0
  ---------------------------------
  -h   --help    показывает текущую справку
- -p=  --port=   указать порт (default: 8000)
+ -p   --port=   указать порт (default: 8000)
       --debug   включить режим отладки
 """
+    print res
     sys.exit(0)
 
 def main():

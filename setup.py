@@ -14,7 +14,7 @@ install_requires = [
     ]
 
 setup(name='demobill',
-      version='1.01',
+      version='1.02',
       description='Demonstration Billing Server',
       author='Dmitry Vysochin',
       author_email='dmitry.vysochin@gmail.com',
