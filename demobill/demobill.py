@@ -68,10 +68,10 @@ def new():
     try:
         User.get(User.user == name)
     except:
-        return "Already Exist"
+        User.create(user=name, balance=balance)
+        return "OK"
+    return "Already Exist"
 
-    User.create(user=name, balance=balance)
-    return "OK"
 
 @app.get('/')
 def root():
