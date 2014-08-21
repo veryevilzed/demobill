@@ -58,7 +58,7 @@ def list():
     return res
 
 
-@app.get('/new/')
+@app.get('/new')
 def new():
     response.content_type = 'text/plain; charset=utf-8'
     res = ""
@@ -95,7 +95,7 @@ def usage():
 def main():
 
     level = logging.INFO 
-    port = 8000
+    port = 9000
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'hp:', ['help','port=', 'debug'])
     except getopt.GetoptError, err: 
