@@ -18,7 +18,6 @@ setup(name='demobill',
       description='Demonstration Billing Server',
       author='Dmitry Vysochin',
       author_email='dmitry.vysochin@gmail.com',
-      url='https://github.com/veryevilzed/rk_payserv',
       install_requires=install_requires,
       packages=['demobill',],
       entry_points = {
