@@ -19,3 +19,5 @@ echo "insert into user values (1,'session1',10000), (2,'session2',10000), (3,'se
 ```
 demobill -p 9000 --debug
 ```
+
+Биллинг застартован по адресу http://127.0.0.1:9000/do
