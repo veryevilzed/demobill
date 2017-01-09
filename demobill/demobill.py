@@ -13,7 +13,7 @@ db = SqliteDatabase('demobilling.db')
 
 class User(Model):
     user = CharField()
-    balance = IntegerField(default=0)
+    balance = FloatField(default=0)
 
     class Meta:
         database = db 
@@ -44,7 +44,7 @@ def do():
     curl -X POST -d '{"plus":0, "minus":3, "session": "session1"}' http://localhost:9000/do
 
     Ответ:
-    * { "status":"OK", "balance":195650 }
+    * { "status":"OK", "balance":1956.50 }
     * { "status":"not_enough_money", "balance":2 }
     * { "status":"session_not_found" }
     """
@@ -62,7 +62,7 @@ def list():
     response.content_type = 'text/plain; charset=utf-8'
     res = ""
     for user in User.select():
-        res += "%s = %d \n" % (user.user, user.balance)
+        res += "%s = %s \n" % (user.user, user.balance)
     return res
 
 
@@ -75,7 +75,7 @@ def new():
     response.content_type = 'text/plain; charset=utf-8'
     res = ""
     name = request.GET.get("name", "")
-    balance = int(request.GET.get("balance", "0"))
+    balance = float(request.GET.get("balance", "0"))
 
     try:
         User.get(User.user == name)
